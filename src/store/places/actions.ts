@@ -14,6 +14,11 @@ const actions: ActionTree<PlacesState, StateInterface> = {
                 
             }
         )
+    },
+
+    // TODO: Colocar el valor de retorno.
+    async searchPlacesByTerm({ commit, state }, query: string ) {
+        console.log('Vuex: ', query)
     }
 }
 
