@@ -5,7 +5,8 @@
     <input
         class="form-control"
         type="text"
-        placeholder="Buscar lugares..." />
+        placeholder="Buscar lugares..."
+        v-model="searchTerm" />
     <SearchResults />
   </div>
 </template>
