@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import SearchResults from '@/components/searchResults/SearchResults.vue';
 
 export default defineComponent({
@@ -6,8 +6,26 @@ export default defineComponent({
     components: { SearchResults },
     setup() {
 
-        return {
+        const debounceTimeout = ref();
+        const debouncedValue = ref('');
 
+        return {
+            debouncedValue,
+
+            searchTerm: computed({
+                get() {
+                    return debouncedValue.value;
+                },
+                set( val: string ) {
+                    
+                    if ( debounceTimeout.value ) clearTimeout( debounceTimeout.value );
+
+                    debounceTimeout.value = setTimeout(() => {
+                        debouncedValue.value = val;
+                    }, 2000);
+
+                }
+            })
         }
 
     }
