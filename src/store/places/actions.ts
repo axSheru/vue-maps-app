@@ -1,7 +1,7 @@
 import { ActionTree } from 'vuex';
 import { PlacesState } from './state';
 import { StateInterface } from '../index';
-import { searchApi } from '@/apis/searchAPI';
+import { searchApi } from '@/apis';
 import { PlacesResponse } from '@/interfaces/places';
 
 
