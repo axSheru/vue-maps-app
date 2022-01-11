@@ -9,12 +9,16 @@
     <ul v-else-if="places.length > 0"
         class="list-group mt-3">
         <li v-for="place in places"
+            :class="{ 'active': place.id === activePlace }"
             :key="place.id"
+            @click="onPlaceClicked( place )"
             class="list-group-item list-group-item-action">
             <h5>{{place.text}}</h5>
             <p>{{place.place_name}}</p>
             <div align="right">
-                <button class="btn btn-outline-primary btn-sm">
+                <button
+                    class="btn btn-outline-primary btn-sm"
+                    :class="( place.id === activePlace ) ? 'btn-outline-light' : 'btn-outline-primary' ">
                     Direcciones
                 </button>
             </div>
