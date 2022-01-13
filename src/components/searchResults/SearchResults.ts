@@ -27,8 +27,8 @@ export default defineComponent({
 
                 map.value?.flyTo({
                     center: [ lng, lat ],
-                    zoom: 16,
-                })
+                    zoom: 14,
+                });
             },
 
             getRouteDirections: (place: Feature) => {
@@ -36,7 +36,7 @@ export default defineComponent({
                 if ( !userLocation.value ) return;
 
                 const [ lng, lat ] = place.center;
-                const [ startLng, startLat ] = place.center;
+                const [ startLng, startLat ] = userLocation.value;
 
                 const start: [ number, number ] = [ startLng, startLat ];
                 const end: [ number, number ] = [ lng, lat ];
