@@ -33,10 +33,10 @@ li {
 }
 
 h5 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p {
-    font-size: 12px;
+    font-size: 10px;
 }
 </style>
