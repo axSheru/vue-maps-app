@@ -1,5 +1,10 @@
 # maps-app
 
+## Project example
+
+This is a live example of this app.
+<https://axsheru-maps-vue.netlify.app/#/>
+
 ## Project setup
 ```
 npm install
